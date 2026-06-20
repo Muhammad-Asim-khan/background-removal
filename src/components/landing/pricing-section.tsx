@@ -77,7 +77,7 @@ export function PricingSection() {
               <h3 className="text-lg font-semibold">{plan.name}</h3>
               <div className="mt-4 flex items-baseline gap-1">
                 <span className="text-4xl font-bold">
-                  ${annual ? plan.annualPrice / 12 : plan.monthlyPrice}
+                  ${annual ? Math.round(plan.annualPrice / 12) : plan.monthlyPrice}
                 </span>
                 {plan.monthlyPrice > 0 && (
                   <span className="text-sm text-muted-foreground">/month</span>
